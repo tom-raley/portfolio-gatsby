@@ -1,0 +1,175 @@
+/*Universal Styles*/
+html {
+    scroll-behavior: smooth;
+}
+
+body, html {
+    font-size: 16px;
+    font-family: Montserrat, sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    width: 100%;
+}
+
+button {
+    outline: none !important;
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.name-color {
+    color: #0981E5;
+}
+
+/*Navbar Styles*/
+.navbar-brand {
+    font-weight: 600;
+}
+
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+}
+
+.navbar-default .navbar-toggle {
+    border: none;
+}
+
+.dropdown-item {
+    margin-left: 1rem;
+}
+
+#mobile-nav-button {
+    transition: all 10s ease;
+}
+
+/*Jumbotron Styles*/
+
+.jumbotron {
+    margin-bottom: 0;
+    background-image: linear-gradient(to top right, #EEEEEE, #045AA2);
+    text-align: center;
+}
+
+.jumbotron img {
+    border-radius: 50%;
+    width: 300px;
+    animation: 3s 0s 1 fadeIn;
+}
+
+.jumbotron h1 {
+    margin-top: 2rem;
+    animation: 1s 0s 1 slideInFromTop;
+}
+
+.jumbotron p{
+        animation: 2s 0s 1 slideInFromTop;
+}
+
+/*About Me Section Styles*/
+.about {
+    margin: 2rem 1rem 2rem 1rem;
+    text-align: center;
+}
+
+
+.about img {
+    border-radius: 50%;
+    width: 300px;
+    margin-bottom: 2rem;
+}
+
+/*Portfolio Styles*/
+.portfolio {
+    text-align: center;
+    background-image: linear-gradient(to bottom left, #EEEEEE, #0981E5);
+}
+
+.portfolio-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    padding-top: 3rem;
+}
+
+.card {
+    border: none;
+    margin-bottom: 2rem;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+.btn-name-color {
+    background-color: #045AA2;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+footer p {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.social-logo {
+    color: #0981E5;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/*Contact Styles*/
+.contact-header {
+    padding-top: 3rem;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+#mail-link {
+    color: rgb(3, 3, 3);
+}
+
+.anchor-padding {
+    padding-top: 100px;
+}
+
+#about {
+    padding-top: -50px;
+}
+
+
+@media only screen and (max-width: 992px) {
+    .anchor-padding {
+        padding-top: 525px;
+        margin-top: -525px;
+    }
+
+    #about {
+        padding-top: 300px;
+        margin-top: -300px;
+    }
+}
