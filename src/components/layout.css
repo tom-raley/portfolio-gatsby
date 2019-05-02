@@ -3,3 +3,4 @@
 @import '../dist/css/reset.css';
 @import '../dist/css/style.css';
 @import url('https://use.fontawesome.com/releases/v5.2.0/css/all.css');
+@import url('https://unpkg.com/aos@next/dist/aos.css');
