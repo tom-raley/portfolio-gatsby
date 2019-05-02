@@ -1,10 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa"
-
+import AOS from 'aos'
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+
+AOS.init();
 
 const beeristImg = require('../dist/images/beerist.png')
 const offTheRalesImg = require('../dist/images/offtherales.png')
