@@ -8,18 +8,16 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `Montserrat\:400,600,800i`,
-        ]
-      }
+        fonts: [`Montserrat\:400,600,800i`],
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/blogposts`,
-        name: "mardown-pages",
+        path: `${__dirname}/src/posts/`,
+        name: "posts",
       },
     },
     `gatsby-transformer-remark`,
