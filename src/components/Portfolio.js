@@ -2,13 +2,10 @@ import React, { Component } from 'react'
 
 const beeristImg = require('../dist/images/beerist.png')
 const beeristWebp = require('../dist/images/beerist.webp')
-const beeristMobile = require('../dist/images/beerist-mobile.png')
 const offTheRalesImg = require('../dist/images/offtherales.png')
 const offTheRalesWebp = require('../dist/images/offtherales.webp')
-const offTheRalesMobile = require('../dist/images/offtherales-mobile.png')
 const squareOneImg = require('../dist/images/squareone.png')
 const squareOneWebp = require('../dist/images/squareone.webp')
-const squareOneMobile = require('../dist/images/squareone-mobile.png')
 
 
 class Portfolio extends Component {
@@ -21,7 +18,6 @@ class Portfolio extends Component {
             <div className="card">
               <picture data-aos="fade-right" data-aos-duration="2000">
                 <source className="card-img-top" srcSet={squareOneWebp} />
-                <source className="card-img-top" media="(max-width: 780px)" srcSet={squareOneMobile} />
                 <img className="card-img-top" src={squareOneImg} alt="Square One screenshot" />
               </picture>
               <div className="card-body" data-aos="fade-left" data-aos-duration="2000">
@@ -39,7 +35,6 @@ class Portfolio extends Component {
             <div className="card">
               <picture data-aos="fade-right" data-aos-duration="2000">
                 <source className="card-img-top" srcSet={offTheRalesWebp} />
-                <source className="card-img-top" media="(max-width: 780px)" srcSet={offTheRalesMobile} />
                 <img className="card-img-top" src={offTheRalesImg} alt="Off the rales screenshot" />
               </picture>
               <div className="card-body" data-aos="fade-left" data-aos-duration="2000">
@@ -56,7 +51,6 @@ class Portfolio extends Component {
               <div className="card" >
                 <picture  data-aos="fade-right" data-aos-duration="2000">
                   <source className="card-img-top" srcSet={beeristWebp} />
-                  <source className="card-img-top" media="(max-width: 780px)" srcSet={beeristMobile} />
                   <img className="card-img-top" src={beeristImg} alt="Beerist screenshot" />
                 </picture>
                 <div className="card-body" data-aos="fade-left" data-aos-duration="2000">
