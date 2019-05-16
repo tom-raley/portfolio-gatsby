@@ -12,6 +12,7 @@ class Navigation extends Component {
       >
         tom<span className="name-color">raley</span>
       </Link>
+      {//Need to make mobile menu collapse when clicking link and make animation work
       <Navbar.Toggle className="hamburger hamburger--spin navbar-toggler collapsed" id="mobile-nav-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
         aria-expanded="false" aria-label="Toggle navigation">
         <span className="hamburger-box">
