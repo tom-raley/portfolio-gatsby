@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Navbar from "../components/Navbar"
+import Navigation from "../components/Navigation"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -11,7 +11,7 @@ export default function Template({
   return (
     <div className="blog-post-container">
       <div className="blog-post">
-        <Navbar />
+        <Navigation />
         <h1>{frontmatter.title}</h1>
         <h2>{frontmatter.date}</h2>
         <div
