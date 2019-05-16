@@ -6,12 +6,18 @@ export default function Template({
 }) {
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark
+  const divStyle = {
+    display: flex,
+    justifyContent: center
+  }
   return (
     <div className="blog-post-container">
       <div className="blog-post">
+        <Navbar />
         <h1>{frontmatter.title}</h1>
         <h2>{frontmatter.date}</h2>
         <div
+          style = {style}
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
         />
