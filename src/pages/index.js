@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Navbar from "../components/Navbar"
+import Navigation from "../components/Navigation"
 import Jumbotron from "../components/Jumbotron"
 import About from "../components/About"
 import Portfolio from "../components/Portfolio"
@@ -24,7 +24,7 @@ class IndexPage extends Component {
     return <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
       <Jumbotron />
-      <Navbar />
+      <Navigation />
       <About />
       <Portfolio />
       <Contact />

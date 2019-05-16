@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 
 const beeristImg = require('../dist/images/beerist.png')
-const beeristWebp = require('../dist/images/beerist.webp')
+//const beeristWebp = require('../dist/images/beerist.webp')
 const offTheRalesImg = require('../dist/images/offtherales.png')
-const offTheRalesWebp = require('../dist/images/offtherales.webp')
+//const offTheRalesWebp = require('../dist/images/offtherales.webp')
 const squareOneImg = require('../dist/images/squareone.png')
-const squareOneWebp = require('../dist/images/squareone.webp')
+//const squareOneWebp = require('../dist/images/squareone.webp')
 
 
 class Portfolio extends Component {

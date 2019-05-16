@@ -1,9 +1,10 @@
 import React, { Component } from "react"
 import { Link } from 'gatsby'
+import Navbar from 'react-bootstrap/Navbar'
 
-class Navbar extends Component {
+class Navigation extends Component {
   render() {
-    return <nav className="navbar sticky-top navbar-expand-lg navbar-light bg-light" id="nav">
+    return <Navbar collapseOnSelect className="navbar sticky-top navbar-expand-lg navbar-light bg-light" expand="lg" bg="light" id="nav">
       <Link
       to="/"
       className="navbar-brand" 
@@ -11,14 +12,14 @@ class Navbar extends Component {
       >
         tom<span className="name-color">raley</span>
       </Link>
-      <button className="hamburger hamburger--spin navbar-toggler collapsed" id="mobile-nav-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      <Navbar.Toggle className="hamburger hamburger--spin navbar-toggler collapsed" id="mobile-nav-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
         aria-expanded="false" aria-label="Toggle navigation">
         <span className="hamburger-box">
           <span className="hamburger-inner"></span>
         </span>
-      </button>
+      </Navbar.Toggle>
 
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <Navbar.Collapse className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
           <Link 
@@ -64,9 +65,9 @@ class Navbar extends Component {
             <a className="nav-link social-logo fab fa-github-square fa-2x" id="nav-link-color" href="https://github.com/tom-raley" target="_blank" rel="noopener noreferrer"><i alt="github logo"></i></a>
           </li>
         </ul>
-      </div>
-    </nav>
+      </Navbar.Collapse>
+    </Navbar>
   } 
 }
 
-export default Navbar
+export default Navigation
