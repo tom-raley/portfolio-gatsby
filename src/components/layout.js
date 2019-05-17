@@ -30,3 +30,13 @@ Layout.propTypes = {
 }
 
 export default Layout
+
+export const pageQuery = graphql`
+  query PortfolioImageQuery {
+    squareOneImage: imageSharp(id: { regex: "/squareone/" }) {
+      sizes(maxWidth: 1240 ) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  }
+`
