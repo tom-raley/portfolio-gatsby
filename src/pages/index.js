@@ -4,10 +4,11 @@ import SEO from "../components/seo"
 import Navigation from "../components/Navigation"
 import Jumbotron from "../components/Jumbotron"
 import About from "../components/About"
-import Portfolio from "../components/Portfolio"
+import PortfolioList from "../components/PortfolioList"
 import Contact from "../components/Contact"
 import Footer from "../components/Footer"
-
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
 class IndexPage extends Component {
   componentDidMount() {
@@ -26,7 +27,7 @@ class IndexPage extends Component {
       <Jumbotron />
       <Navigation />
       <About />
-      <Portfolio />
+      <PortfolioList squareOneImage={this.props.data.squareOneImage}/>
       <Contact />
       <Footer />
     </Layout>
