@@ -7,8 +7,6 @@ import About from "../components/About"
 import PortfolioList from "../components/PortfolioList"
 import Contact from "../components/Contact"
 import Footer from "../components/Footer"
-import { graphql } from "gatsby"
-import Img from "gatsby-image"
 
 class IndexPage extends Component {
   componentDidMount() {
@@ -22,15 +20,17 @@ class IndexPage extends Component {
   }
 
   render() {
-    return <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-      <Jumbotron />
-      <Navigation />
-      <About />
-      <PortfolioList squareOneImage={this.props.data.squareOneImage}/>
-      <Contact />
-      <Footer />
-    </Layout>
+    return (
+      <Layout>
+        <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+        <Jumbotron />
+        <Navigation />
+        <About />
+        <PortfolioList />
+        <Contact />
+        <Footer />
+      </Layout>
+    )
   }
 }
 
