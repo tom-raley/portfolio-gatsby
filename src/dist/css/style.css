@@ -61,6 +61,12 @@ button {
     transition: all 10s ease;
 }
 
+.navbar-nav > button {
+    display: inline-block !important;
+    border: none !important;
+    text-align: left !important;
+}
+
 /*Jumbotron Styles*/
 
 .jumbotron {

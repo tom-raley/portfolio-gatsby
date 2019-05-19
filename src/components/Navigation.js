@@ -26,7 +26,7 @@ class Navigation extends Component {
         </Navbar.Toggle>
         <Navbar.Collapse id="navbarSupportedContent">
           <Nav className="mr-auto">
-            <Navbar.Toggle onClick={() => this.toggleClass()} role="button"><Link className="nav-link" to="#about">About</Link></Navbar.Toggle>
+          <Navbar.Toggle onClick={() => this.toggleClass()} role="button"><Link className="nav-link" to="#about">About</Link></Navbar.Toggle>
             <Navbar.Toggle onClick={() => this.toggleClass()} role="button"><Link className="nav-link" to="#portfolio">Portfolio</Link></Navbar.Toggle>
             <Navbar.Toggle onClick={() => this.toggleClass()} role="button"><Link className="nav-link" role="button" to="#contact">Contact</Link></Navbar.Toggle>
             <Navbar.Toggle onClick={() => this.toggleClass()} role="button"><Link className="nav-link" role="button" to="/blog">Blog</Link></Navbar.Toggle>
