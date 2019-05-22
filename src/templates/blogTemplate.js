@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import Layout from "../components/layout"
 import Navigation from "../components/Navigation"
 import Footer from "../components/Footer"
 
@@ -35,7 +36,7 @@ export default function Template({
   }
 
   return (
-    <React.Fragment>
+    <Layout>
     <Navigation />
       <div className="blog-post-container">
         <div className="blog-post" style={blogPostContainerStyle}>
@@ -53,7 +54,7 @@ export default function Template({
         </div>
       </div>
       <Footer />
-    </React.Fragment>
+    </Layout>
   )
 }
 
