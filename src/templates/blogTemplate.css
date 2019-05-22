@@ -1,0 +1,11 @@
+@media screen and (max-width: 780px) {
+  .blog-post-content {
+    margin-right: 10px !important;
+    margin-left: 10px !important;
+  }
+
+  .blog-post-preview {
+    margin-right: 10px !important;
+    margin-left: 10px !important;
+  }
+}
