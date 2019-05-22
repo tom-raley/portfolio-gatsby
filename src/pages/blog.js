@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "gatsby-link";
 import Navigation from "../components/Navigation"
+import Layout from "../components/layout"
 import { graphql } from "gatsby"
 
 export default function Index({ data }) {
@@ -31,7 +32,7 @@ export default function Index({ data }) {
     fontWeight: '100 !important'
   }
   return (
-    <React.Fragment>
+    <Layout>
       <Navigation />
       <div className="blog-posts" style={postListStyle}>
         {posts
@@ -48,7 +49,7 @@ export default function Index({ data }) {
             );
           })}
       </div>
-    </React.Fragment>
+    </Layout>
   );
 }
 export const pageQuery = graphql`
