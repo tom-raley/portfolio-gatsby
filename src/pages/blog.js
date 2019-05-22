@@ -33,6 +33,7 @@ export default function Index({ data }) {
   }
   return (
     <Layout>
+      <SEO title="Blog" keywords={[`gatsby`, `application`, `react`]} />
       <Navigation />
       <div className="blog-posts" style={postListStyle}>
         {posts
