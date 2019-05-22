@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { graphql} from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Navigation from "../components/Navigation"
@@ -19,14 +20,14 @@ class IndexPage extends Component {
     this.aos.refresh()
   }
 
-  render() {
+  render(data) {
     return (
       <Layout>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
         <Jumbotron />
         <Navigation />
         <About />
-        <PortfolioList />
+        <PortfolioList data={data} />
         <Contact />
         <Footer />
       </Layout>
@@ -35,3 +36,14 @@ class IndexPage extends Component {
 }
 
 export default IndexPage
+
+export const pageQuery = graphql`
+query {
+  squareOneImg: file(relativePath:{eq: "squareone.png"}) {
+    childImageSharp {
+      fluid(maxWidth:786) {
+				...GatsbyImageSharpFluid   
+      }
+    }
+  }
+}`
