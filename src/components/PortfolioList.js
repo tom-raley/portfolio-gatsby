@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Portfolio from "./Portfolio"
 
 class PortfolioList extends Component {
+  
   static defaultProps = {
     projects: [
       {
@@ -34,9 +35,9 @@ class PortfolioList extends Component {
     ],
   }
 
-  render(data) {
+  render() {
     const projects = this.props.projects.map((r, index) => (
-      <Portfolio data={data} key={index} {...r} />
+      <Portfolio key={index} {...r} />
     ))
 
     return (
