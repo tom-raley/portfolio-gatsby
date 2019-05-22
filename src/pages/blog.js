@@ -28,7 +28,7 @@ export default function Index({ data }) {
   }
 
   const dateStyle = {
-    fontSize: '0.2em !important',
+    fontSize: '1rem',
     fontWeight: '100 !important'
   }
   return (
