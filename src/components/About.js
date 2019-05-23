@@ -1,6 +1,17 @@
 import React, { Component } from "react"
 
 class About extends Component {
+
+  componentDidMount() {
+    const AOS = require('aos');
+    this.aos = AOS
+    this.aos.init()
+  }
+
+  componentDidUpdate() {
+    this.aos.refresh()
+  }
+
   render() {
     return <div className="container anchor-padding" id="about">
       <div className="row">

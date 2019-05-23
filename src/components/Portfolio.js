@@ -10,6 +10,16 @@ class Portfolio extends Component {
     url: PropTypes.string.isRequired
   }
 
+  componentDidMount() {
+    const AOS = require('aos');
+    this.aos = AOS
+    this.aos.init()
+  }
+
+  componentDidUpdate() {
+    this.aos.refresh()
+  }
+
   render() {
     const {title, id, description, url, fluid} = this.props;
     return (
