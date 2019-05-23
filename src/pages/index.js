@@ -64,7 +64,7 @@ query {
   profilePic: file(relativePath:{eq: "profile_pic.jpg"}) {
     childImageSharp {
       fluid(maxWidth:786) {
-				...GatsbyImageSharpFluid   
+				...GatsbyImageSharpFluid_noBase64
       }
     }
   }
