@@ -10,15 +10,6 @@ import Contact from "../components/Contact"
 import Footer from "../components/Footer"
 
 class IndexPage extends Component {
-  componentDidMount() {
-    const AOS = require('aos');
-    this.aos = AOS
-    this.aos.init()
-  }
-
-  componentDidUpdate() {
-    this.aos.refresh()
-  }
 
   render() {
     const photos = this.props.data;
