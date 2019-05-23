@@ -21,11 +21,18 @@ class IndexPage extends Component {
   }
 
   render(data) {
-    const photos = this.props.data.squareOneImg.childImageSharp.fluid;
     const photos = [
       {
         title: this.props.data.squareOneImg.ChildImageSharp.src,
-        fluid: this.
+        fluid: this.props.data.squareOneImg.ChildImageSharp.fluid,
+      },
+      {
+        title: this.props.data.offTheRalesImg.ChildImageSharp.src,
+        fluid: this.props.data.offTheRalesImg.ChildImageSharp.fluid,
+      },
+      {
+        title: this.props.data.beeristImg.ChildImageSharp.src,
+        fluid: this.props.data.beeristImg.ChildImageSharp.fluid,
       }
     ]
     return (
