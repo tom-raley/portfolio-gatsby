@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Portfolio from "./Portfolio"
+import Img from "gatsby-image"
 
 class PortfolioList extends Component {
   
@@ -8,8 +9,8 @@ class PortfolioList extends Component {
       {
         title: "Square One Mission",
         id: "squareone",
-        img:
-          "https://res.cloudinary.com/tomraley-dev/image/upload/v1558215677/squareone_zxcbjv.png",
+        /* img:
+          "https://res.cloudinary.com/tomraley-dev/image/upload/v1558215677/squareone_zxcbjv.png", */
         description:
           "A fantastic local company, Square One LLC develops and produces sustainable products that are reusable and environmentally-friendly. When they needed a site to send their customers to, I jumped at the chance to design and develop this landing page for them using Bootstrap, a bit of JavaScript, and HTML/CSS.",
         url: "https://squareonemission.com",
@@ -36,10 +37,10 @@ class PortfolioList extends Component {
   }
 
   render() {
+    const photos = this.props.photos
     const projects = this.props.projects.map((r, index) => (
-      <Portfolio key={index} {...r} />
+      <Portfolio key={index} {...r} photos={photos}/>
     ))
-
     return (
       <div className="portfolio" id="portfolio">
         <h1

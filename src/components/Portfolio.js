@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import Img from "gatsby-image"
 
 class Portfolio extends Component {
   static propTypes = {
@@ -11,13 +12,20 @@ class Portfolio extends Component {
   }
 
   render() {
-    const {title, id, img, description, url} = this.props;
+    const {title, id, description, url, photos} = this.props;
+    const images = ({photos}) => (
+        <Img
+          key={image.node.childImageSharp.fluid.src}
+          fluid={image.node.childImageSharp.fluid}
+          style={{ margin: '3rem 0' }}
+        />
+      ))
     return (
       <div className="container anchor-padding" id={id}>
         <div className="row justify-content-center">
           <div className="col-sm-8">
             <div className="card">
-                <img className="card-img-top" data-aos="fade-right" data-aos-duration="2000" src={img} alt={title} />
+              {images}
               <div className="card-body" data-aos="fade-left" data-aos-duration="2000">
                 <h5 className="card-title">{title}</h5>
                 <p className="card-text">{description}</p>

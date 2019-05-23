@@ -21,13 +21,20 @@ class IndexPage extends Component {
   }
 
   render(data) {
+    const photos = this.props.data.squareOneImg.childImageSharp.fluid;
+    const photos = [
+      {
+        title: this.props.data.squareOneImg.ChildImageSharp.src,
+        fluid: this.
+      }
+    ]
     return (
       <Layout>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
         <Jumbotron />
         <Navigation />
         <About />
-        <PortfolioList data={data} />
+        <PortfolioList photos={photos}  />
         <Contact />
         <Footer />
       </Layout>
@@ -40,6 +47,20 @@ export default IndexPage
 export const pageQuery = graphql`
 query {
   squareOneImg: file(relativePath:{eq: "squareone.png"}) {
+    childImageSharp {
+      fluid(maxWidth:786) {
+				...GatsbyImageSharpFluid   
+      }
+    }
+  }
+  offTheRalesImg: file(relativePath:{eq: "offtherales.png"}) {
+    childImageSharp {
+      fluid(maxWidth:786) {
+				...GatsbyImageSharpFluid   
+      }
+    }
+  }
+  beeristImg: file(relativePath:{eq: "beerist.png"}) {
     childImageSharp {
       fluid(maxWidth:786) {
 				...GatsbyImageSharpFluid   
