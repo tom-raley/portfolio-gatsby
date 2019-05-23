@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Portfolio from "./Portfolio"
-import Img from "gatsby-image"
 
 class PortfolioList extends Component {
   
@@ -38,8 +37,11 @@ class PortfolioList extends Component {
 
   render() {
     const photos = this.props.photos
+    const fluid = Object.keys(photos).map(function (key) {
+      return photos[key].childImageSharp.fluid
+    })
     const projects = this.props.projects.map((r, index) => (
-      <Portfolio key={index} {...r} photos={photos}/>
+      <Portfolio key={index} {...r} fluid={fluid[index]}/>
     ))
     return (
       <div className="portfolio" id="portfolio">
