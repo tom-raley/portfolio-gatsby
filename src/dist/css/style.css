@@ -70,15 +70,13 @@ button {
 /*Jumbotron Styles*/
 
 .jumbotron {
-    margin-bottom: 0;
-    background-image: linear-gradient(to top right, #EEEEEE, #045AA2);
-    text-align: center;
+  margin-bottom: 0;
+  background-image: linear-gradient(to top right, #EEEEEE, #045AA2);
+  text-align: center;
 }
 
-.jumbotron img {
-    border-radius: 50%;
-    width: 300px;
-    animation: 3s 0s 1 fadeIn;
+#profile-pic {
+  
 }
 
 .jumbotron h1 {

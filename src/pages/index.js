@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { graphql} from "gatsby"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import Navigation from "../components/Navigation"
 import Jumbotron from "../components/Jumbotron"
@@ -20,25 +20,12 @@ class IndexPage extends Component {
     this.aos.refresh()
   }
 
-  render(data) {
-    const photos = [
-      {
-        title: this.props.data.squareOneImg.ChildImageSharp.src,
-        fluid: this.props.data.squareOneImg.ChildImageSharp.fluid,
-      },
-      {
-        title: this.props.data.offTheRalesImg.ChildImageSharp.src,
-        fluid: this.props.data.offTheRalesImg.ChildImageSharp.fluid,
-      },
-      {
-        title: this.props.data.beeristImg.ChildImageSharp.src,
-        fluid: this.props.data.beeristImg.ChildImageSharp.fluid,
-      }
-    ]
+  render() {
+    const photos = this.props.data;
     return (
       <Layout>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-        <Jumbotron />
+        <Jumbotron profilePic={photos.profilePic} />
         <Navigation />
         <About />
         <PortfolioList photos={photos}  />
@@ -74,4 +61,12 @@ query {
       }
     }
   }
+  profilePic: file(relativePath:{eq: "profile_pic.jpg"}) {
+    childImageSharp {
+      fluid(maxWidth:786) {
+				...GatsbyImageSharpFluid   
+      }
+    }
+  }
+
 }`
