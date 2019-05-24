@@ -12,10 +12,15 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`Montserrat\:400,600,800i`],
-      },
+    resolve: `gatsby-plugin-prefetch-google-fonts`,
+    options: {
+      fonts: [
+        {
+          family: `Montserrat`,
+          variants: [`400`, `600`, `800i`],
+        }
+      ]
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
