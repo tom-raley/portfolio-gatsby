@@ -48,6 +48,14 @@ module.exports = {
         display: `minimal-ui`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        printRejected: true,
+        develop: true,
+        whitelist: ['nav', 'nav-item', 'navbar-brand', 'home-button', 'hamburger-box', 'hamburger-inner', 'navbarSupportedContent', 'navbar-collapse', 'collapse', 'navbar', 'navbar-expand-lg', 'navbar-light', 'bg-light', 'sticky-top', 'mobile-nav-button', 'hamburger--spin', 'navbar-toggler', 'mr-auto', 'navbar-nav', 'nav-link', 'show', 'is-active', 'collapsed']
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
