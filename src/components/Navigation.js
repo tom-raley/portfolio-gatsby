@@ -33,9 +33,9 @@ class Navigation extends Component {
             <Navbar.Toggle onClick={() => this.toggleClass()} role="button"><Link className="nav-link" role="button" to="/blog">Blog</Link></Navbar.Toggle>
           </Nav>
           <Nav>
-            <Nav.Link className="social-logo" id="nav-link-color" href="https://www.linkedin.com/in/tom-raley/" target="_blank"><FaLinkedin size={32} /></Nav.Link>
-          <Nav.Link className="social-logo" id="nav-link-color" href="https://twitter.com/tom_raley" target="_blank"><FaTwitterSquare size={32} /></Nav.Link>
-          <Nav.Link className="social-logo" id="nav-link-color" href="https://github.com/tom-raley" target="_blank"><FaGithubSquare size={32} /></Nav.Link>
+          <Nav.Link className="social-logo" id="nav-link-color" href="https://www.linkedin.com/in/tom-raley/" target="_blank" rel="noopener"><FaLinkedin size={32} /></Nav.Link>
+          <Nav.Link className="social-logo" id="nav-link-color" href="https://twitter.com/tom_raley" target="_blank" rel="noopener"><FaTwitterSquare size={32} /></Nav.Link>
+          <Nav.Link className="social-logo" id="nav-link-color" href="https://github.com/tom-raley" target="_blank" rel="noopener"><FaGithubSquare size={32} /></Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
