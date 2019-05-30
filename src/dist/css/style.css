@@ -53,10 +53,6 @@ button {
     border: none;
 }
 
-.dropdown-item {
-    margin-left: 1rem;
-}
-
 #mobile-nav-button {
     transition: all 10s ease;
 }
@@ -89,13 +85,6 @@ button {
     margin: 2rem 1rem 2rem 1rem;
     text-align: center;
     padding-top: 4rem;
-}
-
-
-.about img {
-    border-radius: 50%;
-    width: 300px;
-    margin-bottom: 2rem;
 }
 
 /*Portfolio Styles*/
@@ -162,6 +151,7 @@ footer p {
     .anchor-padding {
         padding-top: 525px;
         margin-top: -525px;
+        overflow-x: hidden;
     }
 
     #about {
