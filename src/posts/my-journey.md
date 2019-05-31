@@ -5,9 +5,9 @@ title: "How I Landed A Real-World Dev Job In 6 Months"
 image: macbook-desk.jpg
 ---
 
-Hello world! I recently landed my first role as a Web Developer with a local company and I thought it would be useful to share my story.
+Hello world! I recently landed my first role as a Web Developer with a local company and I thought it would be useful to share my story.  
 
-Burned Out, and Couldn't Take it No More
+Burned Out, and Couldn't Take it No More  
 ---------------
 
 Early in 2018, I found myself at a bit of a stand still with my career. I was working as a Union Representative, so I was negotiating contracts, handling grievances, etc. I felt a bit stuck in my current role and saw no real way forward, so I sat down and tried to hone in on my real passion. When I would hold rallies as a Union organizer, a common chant would be "Fired Up! Can't take it no more!" (hence the title of this post). I started researching possible career moves without going back to school and realized that a lot of people seemed to be learning to code and do web development and were getting hired without any Computer Science degree, but just having the skills to do it. I had always been interested in programming and had dabbled in it here and there, but had convinced myself in college that I was no good at math, so I could never possibly learn how to be a real programmer. But, having seen so many success stories of others who had done the same thing I was trying to do, I figured I had nothing to lose. So, in April, I signed up for the Codecademy Build Websites From Scratch Pro Intensive and lo and behold–I loved it!

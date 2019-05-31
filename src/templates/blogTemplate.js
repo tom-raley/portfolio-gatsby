@@ -32,7 +32,8 @@ export default function Template({
     paddingTop: '3em',
     marginLeft: '15em',
     marginRight: '15em',
-    lineHeight: '2em'
+    lineHeight: '2em',
+    
   }
 
   return (
@@ -41,7 +42,7 @@ export default function Template({
       <div className="blog-post-container">
         <div className="blog-post" style={blogPostContainerStyle}>
           <h1 style={titleStyle}>{frontmatter.title}</h1>
-          <h2 style={dateStyle}>{frontmatter.date}</h2>
+          <h2 style={dateStyle}>Published {frontmatter.date}</h2>
           <figure>
             <Img fluid={frontmatter.image.childImageSharp.fluid} />
             <figcaption>{frontmatter.credit}</figcaption>
