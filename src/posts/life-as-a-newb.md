@@ -31,6 +31,6 @@ TL;DR
 ----
 Honestly, being a professional Code Newbie is not much different from being a Code Newbie who doesn't officially have a dev job. You still work on projects, you still run into issues, you still go to StackOverflow to solve them, and you still make it through. You will have good days and bad days, problems that frustrate you to no end, and also successes that make you feel like you're on the top of the world.
 
-If you're learning web development, you likely have a reason and I can tell you--being a web developer, despite its challenges, it's still miles better than what I was doing previously and I wouldn't change anything for the world.
+If you're learning web development, you likely have a reason and I can tell you--being a web developer, despite its challenges, is still miles better than what I was doing previously and I wouldn't change anything for the world.
 
 I hope this helps someone, and please email me or hit me up on Twitter if you ever want to chat!
