@@ -1,6 +1,6 @@
 ---
 path: "/blog/life-as-a-code-newbie"
-date: "May 31, 2019"
+date: "2019-05-31"
 title: "Life As a Professional Code Newbie"
 image: javascript.jpg
 ---
