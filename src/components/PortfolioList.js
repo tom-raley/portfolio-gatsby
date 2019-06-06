@@ -9,7 +9,7 @@ class PortfolioList extends Component {
         title: "Square One Mission",
         id: "squareone",
         description:
-          "A fantastic local company, Square One LLC develops and produces sustainable products that are reusable and environmentally-friendly. When they needed a site to send their customers to, I jumped at the chance to design and develop this landing page for them using Gatsby and React.",
+          "A fantastic local company, Square One LLC develops and produces sustainable products that are reusable and environmentally-friendly. When they needed a site to send their customers to, I jumped at the chance to design and develop this landing page for them using Bootstrap, a bit of JavaScript, and HTML/CSS.",
         url: "https://squareonemission.com",
       },
       {
