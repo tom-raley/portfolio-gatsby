@@ -63,8 +63,9 @@ export const pageQuery = graphql`
           id
           frontmatter {
             title
-            date
+            date(formatString: "MMMM D, YYYY")
             path
+            author
             image {
               childImageSharp {
                 resize(width: 1500, height: 1500) {

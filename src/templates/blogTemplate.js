@@ -41,7 +41,7 @@ export default function Template({
       <div className="blog-post-container">
         <div className="blog-post" style={blogPostContainerStyle}>
           <h1 style={titleStyle}>{frontmatter.title}</h1>
-          <h2 style={dateStyle}>{frontmatter.date}</h2>
+          <h2 style={dateStyle}>{frontmatter.author}     |     {frontmatter.date}</h2>
           <figure>
             <Img fluid={frontmatter.image.childImageSharp.fluid} />
             <figcaption>{frontmatter.credit}</figcaption>
@@ -63,9 +63,10 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
-        date
+        date(formatString: "MMMM D, YYYY")
         path
         title
+        author
         image {
           childImageSharp {
             resize(width: 1500, height: 1500) {
