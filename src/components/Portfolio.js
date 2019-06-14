@@ -35,7 +35,7 @@ class Portfolio extends Component {
               <div className="card-body" data-aos="fade-left" data-aos-duration="2000">
                 <h5 className="card-title">{title}</h5>
                 <p className="card-text">{description}</p>
-                <a href={url} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-name-color">Visit Site</a>
+                <a href={url} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-name-color">View {title}</a>
               </div>
             </div>
           </div>
