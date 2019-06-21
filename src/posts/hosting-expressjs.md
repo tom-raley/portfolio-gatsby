@@ -18,7 +18,7 @@ First, I had to create a production copy of all of my back end files, since I ha
 
 Deploying With Git
 ----
-Since I'm familiar with Git already, I decided that was a better option than using FTP. I set up a new user under "FTP/Credentials" and then connected my local folder containing my back end files to this remote repository. I went ahead and pushed the files and waited for the server to build the app.
+Since I'm familiar with Git already, I decided that it was a better option than using FTP. I set up a new user under "FTP/Credentials" and then connected my local folder containing my back end files to this remote repository. I went ahead and pushed the files and waited for the server to build the app.
 
 The nice thing about Azure is that it will automatically download and install all the necessary dependencies from your `package.json`, then it will run either a custom build command, or by default will look for a `server.js` file in your root and run `node server.js` for you to get your Express or Node app up and running. Easy peasy!
 
@@ -26,7 +26,7 @@ The Dreaded CORS Policy
 ----
 I was excited to check out the functionality of the routes I had created for my API. When I loaded the app, the JSON I had set up was all there! Perfect.
 
-I went back into my local React app, did an `npm start` and was excited to see my front end code populate with all the back end data. Lo and behold, it did not load. I checked the console only to find a CORS policy error. Ugh.
+I went back into my local React app, did an `npm start` and was hoping to see my front end code populate with all the back end data. Lo and behold, it did not load. I checked the console only to find a CORS policy error. Ugh.
 
 If you've worked with APIs in the past, you've likely run into these types of errors before. Basically, unless the API server is sending a header indicating your request is ok, many browsers will automatically block your request for security reasons. This is generally a good thing, but frustrating during development. Back to the drawing board.
 
