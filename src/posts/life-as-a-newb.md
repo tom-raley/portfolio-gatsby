@@ -3,6 +3,7 @@ path: "/blog/life-as-a-code-newbie"
 date: "2019-05-31"
 title: "Life As a Professional Code Newbie"
 image: javascript.jpg
+author: 'Tom Raley'
 ---
 
 From Zero to Hero  
