@@ -19,6 +19,14 @@ button {
     color: #0981E5;
 }
 
+h1 {
+    font-weight: 400;
+}
+
+h2 {
+    font-weight: 400;
+}
+
 /*Navbar Styles*/
 .navbar-brand {
     font-weight: 600;

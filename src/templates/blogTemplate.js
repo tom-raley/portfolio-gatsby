@@ -19,7 +19,6 @@ export default function Template({
   const titleStyle = {
     textAlign: 'center',
     paddingTop: '1em',
-    fontWeight: '500'
   }
   const dateStyle = {
     textAlign: 'center',

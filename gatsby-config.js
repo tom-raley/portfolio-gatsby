@@ -11,7 +11,7 @@ module.exports = {
         trackingId: "UA-126572629-1",
       },
     },
-    {
+    /* {
     resolve: `gatsby-plugin-prefetch-google-fonts`,
     options: {
       fonts: [
@@ -21,7 +21,7 @@ module.exports = {
         }
       ]
       }
-    },
+    }, */
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

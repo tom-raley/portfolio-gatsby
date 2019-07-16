@@ -8,6 +8,7 @@ import About from "../components/About"
 import PortfolioList from "../components/PortfolioList"
 import Contact from "../components/Contact"
 import Footer from "../components/Footer"
+require('typeface-montserrat')
 
 class IndexPage extends Component {
 
