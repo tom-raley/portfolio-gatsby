@@ -3,18 +3,6 @@ import Img from "gatsby-image"
 import Center from 'react-center'
 
 class Jumbotron extends Component {
-
-  componentDidMount() {
-    const AOS = require('aos');
-    this.aos = AOS
-    this.aos.init()
-  }
-
-  componentDidUpdate() {
-    this.aos.refresh()
-  }
-
-
   render() {
     const profilePic = this.props.profilePic.childImageSharp.fluid
     const profilePicStyle = {
@@ -24,8 +12,8 @@ class Jumbotron extends Component {
     }
     return <div className="jumbotron jumbotron-fluid" id="home">
       <div className="container">
-        <Center>
-          <Img fluid={profilePic} style={profilePicStyle} alt="tom" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="2000" data-aos-offset="0"/>
+        <Center data-aos="fade-zoom-in" data-aos-easing="ease-in" data-aos-duration="2000" data-aos-offset="0">
+          <Img fluid={profilePic} style={profilePicStyle} alt="tom" />
         </Center>
         <h1 className="display-4">Hi, I'm Tom.</h1>
         <p className="lead" data-aos="fade-up" data-aos-duration="2000">I'm passionate about solving problems and creating beautiful, functional solutions. </p>

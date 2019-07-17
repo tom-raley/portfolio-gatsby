@@ -11,7 +11,16 @@ import Footer from "../components/Footer"
 require('typeface-montserrat')
 
 class IndexPage extends Component {
+  componentDidMount() {
+    const AOS = require('aos');
+    this.aos = AOS
+    this.aos.init()
+  }
 
+  componentDidUpdate() {
+    this.aos.refresh()
+  }
+  
   render() {
     const photos = this.props.data;
     return (
