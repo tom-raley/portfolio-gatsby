@@ -1,7 +1,7 @@
 ---
-path: "/blog/what-project-should-i-build"
+path: "/blog/what-project-should-you-build"
 date: "2019-06-06"
-title: "What Web Development Project Should I Build Next?"
+title: "What Web Development Project Should You Build Next?"
 author: "Tom Raley"
 image: camera-lens.jpg
 ---

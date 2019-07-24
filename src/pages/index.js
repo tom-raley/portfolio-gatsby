@@ -48,7 +48,7 @@ query {
       }
     }
   }
-  offTheRalesImg: file(relativePath:{eq: "offtherales.png"}) {
+  offTheRalesImg: file(relativePath:{eq: "portfolio.png"}) {
     childImageSharp {
       fluid(maxWidth:786) {
 				...GatsbyImageSharpFluid   

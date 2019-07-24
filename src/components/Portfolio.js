@@ -11,7 +11,7 @@ class Portfolio extends Component {
   }
 
   render() {
-    const {title, id, description, url, fluid} = this.props;
+    const {title, id, description, url, fluid, target, github} = this.props;
     return (
       <div className="container anchor-padding" id={id}>
         <div className="row justify-content-center">
@@ -25,7 +25,8 @@ class Portfolio extends Component {
               <div className="card-body" data-aos="fade-left" data-aos-duration="2000">
                 <h5 className="card-title">{title}</h5>
                 <p className="card-text">{description}</p>
-                <a href={url} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-name-color">View {title}</a>
+                  <a href={url} target={target} rel="noopener noreferrer" className="btn btn-primary btn-name-color" style={{marginRight: '1rem'}}>View Online</a>
+                  <a href={github} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-name-color" style={{marginLeft: '1rem'}}>View Source Code</a>
               </div>
             </div>
           </div>

@@ -9,15 +9,19 @@ class PortfolioList extends Component {
         title: "Square One Mission",
         id: "squareone",
         description:
-          "A fantastic local company, Square One LLC develops and produces sustainable products that are reusable and environmentally-friendly. When they needed a site to send their customers to, I jumped at the chance to design and develop this landing page for them using Bootstrap, a bit of JavaScript, and HTML/CSS.",
+          "A fantastic local company, Square One LLC develops and produces sustainable products that are reusable and environmentally-friendly. When they needed a site to send their customers to, I jumped at the chance to design and develop this landing page for them using React and Gatsby.",
         url: "https://squareonemission.com",
+        github: "https://github.com/tom-raley/squareone-gatsby",
+        target: "_blank"
       },
       {
-        title: "Off the Rales Homebrewery",
-        id: "offtherales",
+        title: "Portfolio",
+        id: "portfolio",
         description:
-          "In addition to web development, I am an avid homebrewer.  I built my own website to showcase my homebrewed beers.",
-        url: "https://tom-raley.github.io/offtherales/",
+          "This is the site you are currently viewing. It is built using Gatsby and React and has been a place for me to trial new technologies, techniques and models, as well as get my thoughts into the world with my Blog to hopefully share useful tips with other devs. It's one of the projects I'm most proud of as it keeps changing as my skills grow!",
+        url: "/#home",
+        github: "https://github.com/tom-raley/portfolio-gatsby",
+        target: ""
       },
       {
         title: "Beerist",
@@ -25,6 +29,8 @@ class PortfolioList extends Component {
         description:
           "A single page beer recommendation web app that uses JavaScript to take a user input, interface with the Untappd API, and return a percentage chance of the user liking that beer.",
         url: "https://tom-raley.github.io/beerist/",
+        github: "https://github.com/tom-raley/beerist",
+        target: "_blank"
       },
     ],
   }
