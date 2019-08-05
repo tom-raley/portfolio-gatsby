@@ -36,6 +36,7 @@ export default function Template({
 
   return (
     <Layout>
+      <SEO title={frontmatter.title}  />
     <Navigation />
       <div className="blog-post-container">
         <div className="blog-post" style={blogPostContainerStyle}>

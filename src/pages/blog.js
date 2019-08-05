@@ -34,7 +34,7 @@ export default function Index({ data }) {
   }
   return (
     <Layout>
-      <SEO title="Blog" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO title="Tom Raley's Blog" keywords={[`gatsby`, `application`, `react`, `web development`, `blog`]} />
       <Navigation />
       <div className="blog-posts" style={postListStyle}>
         {posts

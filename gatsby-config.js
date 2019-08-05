@@ -11,18 +11,8 @@ module.exports = {
         trackingId: "UA-126572629-1",
       },
     },
-    /* {
-    resolve: `gatsby-plugin-prefetch-google-fonts`,
-    options: {
-      fonts: [
-        {
-          family: `Montserrat`,
-          variants: [`400`, `600`, `800i`],
-        }
-      ]
-      }
-    }, */
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -42,6 +32,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
+        ],
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
