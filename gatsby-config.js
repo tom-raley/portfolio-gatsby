@@ -3,6 +3,7 @@ module.exports = {
     title: `Tom Raley`,
     description: `Tom Raley's Portfolio Website`,
     author: `Tom Raley`,
+    siteUrl: `https://tomraley.dev`,
   },
   plugins: [
     {
