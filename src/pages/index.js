@@ -25,7 +25,7 @@ class IndexPage extends Component {
     const photos = this.props.data;
     return (
       <Layout>
-        <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+        <SEO  keywords={[`gatsby`, `application`, `react`]} />
         <Jumbotron profilePic={photos.profilePic} />
         <Navigation />
         <About />
