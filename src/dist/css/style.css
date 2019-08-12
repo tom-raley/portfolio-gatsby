@@ -1,7 +1,4 @@
 /*Universal Styles*/
-html {
-    scroll-behavior: smooth;
-}
 
 body, html {
     font-size: 16px;
@@ -47,6 +44,11 @@ h2 {
 /*Navbar Styles*/
 .navbar-brand {
     font-weight: 600;
+    color: rgb(33, 37, 41) !important;
+}
+
+.navbar-toggler {
+  border: none !important;
 }
 
 .navbar-default .navbar-toggle:focus,
@@ -105,6 +107,14 @@ h2 {
     background-color: rgba(255, 255, 255, 0);
 }
 
+#view-online {
+  margin-right: 1rem;
+}
+
+#view-source-code {
+  margin-left: 1rem;
+}
+
 .card-title {
     font-weight: 600;
 }
@@ -148,14 +158,22 @@ footer p {
 
 
 @media only screen and (max-width: 992px) {
-    .anchor-padding {
+    /* .anchor-padding {
         padding-top: 525px;
         margin-top: -525px;
         overflow-x: hidden;
-    }
+    } */
 
     #about {
         padding-top: 300px;
         margin-top: -300px;
+    }
+
+    #view-online {
+      margin-right: 0.3rem;
+    }
+
+    #view-source-code {
+      margin-left: 0.3rem;
     }
 }
