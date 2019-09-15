@@ -10,8 +10,8 @@ class PortfolioList extends Component {
         id: "squareone",
         description:
           "A fantastic local company, Square One LLC develops and produces sustainable products that are reusable and environmentally-friendly. When they needed a site to send their customers to, I jumped at the chance to design and develop this landing page for them using React and Gatsby.",
-        url: "https://squareonemission.com",
-        github: "https://heuristic-visvesvaraya-088d5a.netlify.com/",
+        url: "https://heuristic-visvesvaraya-088d5a.netlify.com/",
+        github: "https://github.com/tom-raley/squareone-gatsby",
         target: "_blank"
       },
       {
