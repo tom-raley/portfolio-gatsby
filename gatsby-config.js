@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Tom Raley`,
@@ -10,6 +14,13 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-126572629-1",
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `te3gl8mse4qg`,
+        accessToken: process.env.CONTENTUL_ACCESS_TOKEN,
       },
     },
     `gatsby-transformer-sharp`,
