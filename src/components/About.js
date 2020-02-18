@@ -23,7 +23,8 @@ class About extends Component {
             extensively with{" "}
                     <span className="name-color">HTML5, CSS3,</span> and {" "}
                     <span className="name-color">JavaScript</span>, as well as{" "}
-                    <span className="name-color">ReactJS</span> and{" "}
+                    <span className="name-color">AngularJS</span>,
+                    <span className="name-color"> ReactJS</span> and{" "}
                     <span className="name-color">GatsbyJS</span> to implement solutions that solve whatever problems I encounter. Thanks for visiting, and please get
                     in touch if you'd like to talk more.</p>
         </div>

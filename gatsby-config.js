@@ -16,13 +16,13 @@ module.exports = {
         trackingId: "UA-126572629-1",
       },
     },
-    {
+    /* {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `te3gl8mse4qg`,
         accessToken: process.env.CONTENTUL_ACCESS_TOKEN,
       },
-    },
+    }, */
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-sharp`,
