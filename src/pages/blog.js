@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "gatsby-link";
-import Navigation from "../components/Navigation"
+import BlogNavigation from "../components/BlogNavigation"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
@@ -35,7 +35,7 @@ export default function Index({ data }) {
   return (
     <Layout>
       <SEO title="Tom Raley's Blog" keywords={[`gatsby`, `application`, `react`, `web development`, `blog`]} />
-      <Navigation />
+      <BlogNavigation />
       <div className="blog-posts" style={postListStyle}>
         {posts
           .filter(post => post.node.html.childMarkdownRemark.frontmatter.title.length > 0)

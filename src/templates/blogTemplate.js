@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
 import Layout from "../components/Layout"
-import Navigation from "../components/Navigation"
+import BlogNavigation from "../components/BlogNavigation"
 import Footer from "../components/Footer"
 
 export default function Template({
@@ -40,7 +40,7 @@ export default function Template({
   return (
     <Layout>
       <SEO title={title}  />
-    <Navigation />
+    <BlogNavigation />
       <div className="blog-post-container">
         <div className="blog-post" style={blogPostContainerStyle}>
           <h1 style={titleStyle}>{title}</h1>
