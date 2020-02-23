@@ -26,13 +26,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: 'images',
-        path: `${__dirname}/src/dist/images`,
-      }
-    },
     `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-manifest`,

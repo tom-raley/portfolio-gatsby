@@ -13,7 +13,7 @@ class About extends Component {
   }
 
   render() {
-    return <div className="container" id="about">
+    return <div className="container overflow-hidden" id="about">
       <div className="row">
         <div className="about">
           <h1 data-aos="fade-right" data-aos-duration="2000">About</h1>

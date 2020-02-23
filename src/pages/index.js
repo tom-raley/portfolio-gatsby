@@ -22,14 +22,14 @@ class IndexPage extends Component {
   }
   
   render() {
-    const photos = this.props.data;
+    const data = this.props.data;
     return (
       <Layout>
         <SEO  keywords={[`gatsby`, `application`, `react`]} />
-        <Jumbotron profilePic={photos.profilePic} />
+        <Jumbotron profilePic={data.contentfulAsset} />
         <Navigation />
         <About />
-        <PortfolioList photos={photos}  />
+        <PortfolioList data={data.allContentfulPortfolio}  />
         <Contact />
         <Footer />
       </Layout>
@@ -41,6 +41,40 @@ export default IndexPage
 
 export const pageQuery = graphql`
 query {
+  contentfulAsset(title: {eq: "profile_pic"}) {
+    fluid {
+      aspectRatio
+      base64
+      sizes
+      src
+      srcSet
+    }
+  }
+  allContentfulPortfolio(sort: {fields: title, order: DESC}) {
+    edges {
+      node {
+        github
+        description {
+          childMarkdownRemark {
+            rawMarkdownBody
+          }
+        }
+        title
+        url
+        target
+        href
+        image {
+          fluid {
+            aspectRatio
+            base64
+            sizes
+            src
+            srcSet
+          }
+        }
+      }
+    }
+  }
   squareOneImg: file(relativePath:{eq: "squareone.png"}) {
     childImageSharp {
       fluid(maxWidth:786) {

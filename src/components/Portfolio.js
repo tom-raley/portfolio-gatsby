@@ -1,30 +1,23 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import Img from "gatsby-image"
 
 class Portfolio extends Component {
-  static propTypes = {
-    title: PropTypes.string.isRequired,
-    id: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    url: PropTypes.string.isRequired
-  }
-
   render() {
-    const {title, id, description, url, fluid, target, github} = this.props;
+    const {title, href, description, url, target, github, image} = this.props.node;
+    // const { fluid } = this.props
     return (
-      <div className="container" id={id}>
+      <div className="container overflow-hidden" id={href}>
         <div className="row justify-content-center">
           <div className="col-sm-8">
             <div className="card">
               <div className="card-img-top" data-aos="fade-right" data-aos-duration="2000">
                 <Img
-                  fluid={fluid}
+                  fluid={image.fluid}
                 />
               </div>
               <div className="card-body" data-aos="fade-left" data-aos-duration="2000">
                 <h5 className="card-title">{title}</h5>
-                <p className="card-text">{description}</p>
+                <p className="card-text">{description.childMarkdownRemark.rawMarkdownBody}</p>
                 <a href={url} target={target} rel="noopener noreferrer" className="btn btn-primary btn-name-color" id="view-online">View Online</a>
                 <a href={github} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-name-color" id="view-source-code">View Source Code</a>
               </div>
