@@ -1,7 +1,8 @@
 /*Universal Styles*/
 
 .overflow-hidden {
-    overflow-x: hidden;
+    overflow: hidden;
+    /* overflow-y: hidden; */
 }
 
 body, html {
