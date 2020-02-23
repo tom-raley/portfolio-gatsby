@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 import { graphql } from "gatsby"
 
 export default function Index({ data }) {
-  const { edges: posts } = data.allMarkdownRemark;
+  const { edges: posts } = data.allContentfulBlog;
   const postListStyle = {
     paddingTop: '3em',
     paddingBottom: '1em',
@@ -38,15 +38,15 @@ export default function Index({ data }) {
       <Navigation />
       <div className="blog-posts" style={postListStyle}>
         {posts
-          .filter(post => post.node.frontmatter.title.length > 0)
+          .filter(post => post.node.html.childMarkdownRemark.frontmatter.title.length > 0)
           .map(({ node: post }) => {
             return (
-              <div className="blog-post-preview" key={post.id} style={previewStyle}>
+              <div className="blog-post-preview" key={post.html.childMarkdownRemark.id} style={previewStyle}>
                 <h1 style={titleStyle}>
-                  <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
+                  <Link to={`/blog/${post.html.childMarkdownRemark.frontmatter.path}`}>{post.html.childMarkdownRemark.frontmatter.title}</Link>
                 </h1>
-                <h5 style={dateStyle}>{post.frontmatter.date}</h5>
-                <p>{post.excerpt}</p>
+                <h5 style={dateStyle}>{post.date}</h5>
+                <p>{post.html.childMarkdownRemark.excerpt}</p>
               </div>
             );
           })}
@@ -56,29 +56,23 @@ export default function Index({ data }) {
 }
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
-      edges {
-        node {
-          excerpt(pruneLength: 250)
-          id
-          frontmatter {
-            title
-            date(formatString: "MMMM D, YYYY")
-            path
-            author
-            image {
-              childImageSharp {
-                resize(width: 1500, height: 1500) {
-                  src
-                }
-                fluid(maxWidth: 786) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+    allContentfulBlog(sort: {order: DESC, fields: [date]}) {
+    edges {
+      node {
+        html {
+          childMarkdownRemark {
+            excerpt(pruneLength: 250)
+            id
+            frontmatter {
+              title
+              path
+              author
             }
           }
         }
+        date(formatString: "MMMM D, YYYY")
       }
     }
+  }
   }
 `;

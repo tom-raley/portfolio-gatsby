@@ -9,8 +9,10 @@ import Footer from "../components/Footer"
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
-  const { markdownRemark } = data // data.markdownRemark holds our post data
-  const { frontmatter, html } = markdownRemark
+  const { date, image } = data.contentfulBlog
+  const { childMarkdownRemark } = data.contentfulBlog.html // data.contentfulBlog.html holds our post data
+  const { html } = childMarkdownRemark
+  const { title, author } = childMarkdownRemark.frontmatter
 
   const blogPostContainerStyle = {
     display: 'flex',
@@ -37,15 +39,14 @@ export default function Template({
 
   return (
     <Layout>
-      <SEO title={frontmatter.title}  />
+      <SEO title={title}  />
     <Navigation />
       <div className="blog-post-container">
         <div className="blog-post" style={blogPostContainerStyle}>
-          <h1 style={titleStyle}>{frontmatter.title}</h1>
-          <h2 style={dateStyle}>{frontmatter.author}     |     {frontmatter.date}</h2>
+          <h1 style={titleStyle}>{title}</h1>
+          <h2 style={dateStyle}>{author}     |     {date}</h2>
           <figure>
-            <Img fluid={frontmatter.image.childImageSharp.fluid} />
-            <figcaption>{frontmatter.credit}</figcaption>
+            <Img fluid={image.fluid} />
           </figure>
           <div
             className="blog-post-content"
@@ -60,24 +61,27 @@ export default function Template({
 }
 
 export const pageQuery = graphql`
-  query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
-      frontmatter {
-        date(formatString: "MMMM D, YYYY")
-        path
-        title
-        author
-        image {
-          childImageSharp {
-            resize(width: 1500, height: 1500) {
-              src
-            }
-            fluid(maxWidth: 786) {
-              ...GatsbyImageSharpFluid
-            }
+  query ($id: String!) {
+    contentfulBlog(html: {childMarkdownRemark: {id: {eq: $id}}}) {
+      date(formatString: "MMMM D, YYYY")
+      image {
+        fluid(maxWidth: 786) {
+          aspectRatio
+                    base64
+                    src
+                    srcSet
+                    sizes
+        }
+      }
+      html {
+        childMarkdownRemark {
+          id
+          frontmatter {
+            author
+            title
           }
-       }
+          html
+        }
       }
     }
   }
