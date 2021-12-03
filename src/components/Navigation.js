@@ -30,6 +30,7 @@ class Navigation extends Component {
   }
   
   render() {
+    const { resumeUrl } = this.props
     return <Navbar collapseOnSelect sticky="top" expand="lg" bg="light" id="nav">
       <Navbar.Brand onClick={() => this.homeButtonToggleClass()} id="home-button"><Link className="navbar-brand" to="/#home">tom<span className="name-color">raley</span></Link></Navbar.Brand>
         <Navbar.Toggle onClick={() => this.toggleClass()} className = {this.state.active ? 'is-active hamburger hamburger--spin' : 'hamburger hambuger--spin'} id="mobile-nav-button">
@@ -42,7 +43,7 @@ class Navigation extends Component {
             <Navbar.Toggle onClick={() => this.toggleClass()} role="button"><AnchorLink offset="50" className="nav-link" href="#about">About</AnchorLink></Navbar.Toggle>
             <Navbar.Toggle onClick={() => this.toggleClass()} role="button"><AnchorLink offset="350" className="nav-link" href="#portfolio">Portfolio</AnchorLink></Navbar.Toggle>
             <Navbar.Toggle onClick={() => this.toggleClass()} role="button"><AnchorLink className="nav-link" role="button" href="#contact">Contact</AnchorLink></Navbar.Toggle>
-          <Navbar.Toggle onClick={() => this.toggleClass()} role="button"><Nav.Link className="nav-link" href="//assets.ctfassets.net/te3gl8mse4qg/7LA06G6DiGZLgm6MtmWIi7/bd9008d2a5bb6d9e818c98be567a86ba/Full_Stack_Developer_Resume_12-3-21.pdf" target="_blank" rel="noopener">Resum&eacute; </Nav.Link></Navbar.Toggle>
+          <Navbar.Toggle onClick={() => this.toggleClass()} role="button"><Nav.Link className="nav-link" href={resumeUrl} target="_blank" rel="noopener">Resum&eacute; </Nav.Link></Navbar.Toggle>
             <Navbar.Toggle onClick={() => this.toggleClass()} role="button"><Link className="nav-link" role="button" to="/blog">Blog</Link></Navbar.Toggle>
           </Nav>
           <Nav>

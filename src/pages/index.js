@@ -23,11 +23,14 @@ class IndexPage extends Component {
   
   render() {
     const data = this.props.data;
+    const resumeAsset = data.allContentfulAsset.edges.filter((asset => asset.node.title === 'resume'))[0]
+    const resumeUrl = resumeAsset.node.file.url
+    console.log(resumeUrl)
     return (
       <Layout>
         <Seo  keywords={[`gatsby`, `application`, `react`]} />
         <Jumbotron profilePic={data.contentfulAsset} />
-        <Navigation />
+        <Navigation resumeUrl={resumeUrl} />
         <About />
         <PortfolioList data={data.allContentfulPortfolio}  />
         <Contact />
@@ -51,10 +54,16 @@ query {
     }
   }
   allContentfulAsset {
-    nodes {
-      contentful_id
-      title
-      description
+    edges {
+      node {
+        file {
+          details {
+            size
+          }
+          url
+        }
+        title
+      }
     }
   }
   allContentfulPortfolio(sort: {fields: title, order: DESC}) {
