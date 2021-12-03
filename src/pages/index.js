@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { graphql} from "gatsby"
 import Layout from "../components/Layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Navigation from "../components/Navigation"
 import Jumbotron from "../components/Jumbotron"
 import About from "../components/About"
@@ -25,7 +25,7 @@ class IndexPage extends Component {
     const data = this.props.data;
     return (
       <Layout>
-        <SEO  keywords={[`gatsby`, `application`, `react`]} />
+        <Seo  keywords={[`gatsby`, `application`, `react`]} />
         <Jumbotron profilePic={data.contentfulAsset} />
         <Navigation />
         <About />
@@ -48,6 +48,13 @@ query {
       sizes
       src
       srcSet
+    }
+  }
+  allContentfulAsset {
+    nodes {
+      contentful_id
+      title
+      description
     }
   }
   allContentfulPortfolio(sort: {fields: title, order: DESC}) {
@@ -103,5 +110,4 @@ query {
       }
     }
   }
-
 }`

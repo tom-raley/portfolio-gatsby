@@ -16,8 +16,12 @@ class Jumbotron extends Component {
           <Img fluid={profilePic} style={profilePicStyle} alt="tom" />
         </Center>
         <h1 className="display-4">Hi, I'm Tom.</h1>
-        <p className="lead" data-aos="fade-up" data-aos-duration="2000">I'm passionate about solving problems and creating beautiful, functional solutions. </p>
-        <p className="lead" data-aos="fade-up" data-aos-duration="2000">My tools are HTML, CSS and JavaScript.</p>
+        <p className="lead" data-aos="fade-up" data-aos-duration="2000">
+          I'm passionate about solving problems and creating beautiful, functional solutions.
+          <br/>
+          <br />
+          My tools are HTML, CSS and JavaScript.
+        </p>
       </div>
     </div>
   }

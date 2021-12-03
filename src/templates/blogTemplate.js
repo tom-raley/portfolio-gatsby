@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Layout from "../components/Layout"
 import BlogNavigation from "../components/BlogNavigation"
 import Footer from "../components/Footer"
@@ -39,7 +39,7 @@ export default function Template({
 
   return (
     <Layout>
-      <SEO title={title}  />
+      <Seo title={title}  />
     <BlogNavigation />
       <div className="blog-post-container">
         <div className="blog-post" style={blogPostContainerStyle}>

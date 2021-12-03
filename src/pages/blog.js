@@ -2,7 +2,7 @@ import React from "react";
 import Link from "gatsby-link";
 import BlogNavigation from "../components/BlogNavigation"
 import Layout from "../components/Layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import { graphql } from "gatsby"
 
 export default function Index({ data }) {
@@ -34,7 +34,7 @@ export default function Index({ data }) {
   }
   return (
     <Layout>
-      <SEO title="Tom Raley's Blog" keywords={[`gatsby`, `application`, `react`, `web development`, `blog`]} />
+      <Seo title="Tom Raley's Blog" keywords={[`gatsby`, `application`, `react`, `web development`, `blog`]} />
       <BlogNavigation />
       <div className="blog-posts" style={postListStyle}>
         {posts

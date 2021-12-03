@@ -19,7 +19,7 @@ class Portfolio extends Component {
                 <h5 className="card-title">{title}</h5>
                 <p className="card-text">{description.childMarkdownRemark.rawMarkdownBody}</p>
                 <a href={url} target={target} rel="noopener noreferrer" className="btn btn-primary btn-name-color" id="view-online">View Online</a>
-                <a href={github} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-name-color" id="view-source-code">View Source Code</a>
+                {github && <a href={github} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-name-color" id="view-source-code">View Source Code</a>}
               </div>
             </div>
           </div>

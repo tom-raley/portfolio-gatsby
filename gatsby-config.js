@@ -27,23 +27,16 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-remark`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 590,
-            },
-          },
-        ],
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        display: `minimal-ui`, // This path is relative to the root of the site.
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-manifest`,
+    //   options: {
+    //     name: `Tom Raley Dev & Design`,
+    //     short_name: `tomraley`,
+    //     start_url: `/`,
+    //     display: `minimal-ui`,  // This path is relative to the root of the site.
+    //     icon: ``
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {
