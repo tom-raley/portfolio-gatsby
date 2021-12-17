@@ -66,7 +66,7 @@ query {
       }
     }
   }
-  allContentfulPortfolio(sort: {fields: title, order: DESC}) {
+  allContentfulPortfolio(sort: {fields: createdAt, order: ASC}) {
     edges {
       node {
         github
