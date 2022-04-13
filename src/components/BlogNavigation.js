@@ -2,7 +2,8 @@ import React, { Component } from "react"
 import { Link } from 'gatsby'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
-import { FaTwitterSquare, FaGithubSquare, FaLinkedin } from 'react-icons/fa'
+import { FaTwitterSquare, FaGithubSquare } from 'react-icons/fa'
+// import { FaTwitterSquare, FaGithubSquare, FaLinkedin } from 'react-icons/fa'
 
 class BlogNavigation extends Component {
   constructor(props) {
@@ -44,7 +45,7 @@ class BlogNavigation extends Component {
           <Navbar.Toggle onClick={() => this.toggleClass()} role="button"><Link className="nav-link" role="button" to="/blog">Blog</Link></Navbar.Toggle>
         </Nav>
         <Nav>
-          <Nav.Link className="social-logo" id="nav-link-color" href="https://www.linkedin.com/in/tom-raley/" target="_blank" rel="noopener"><FaLinkedin size={32} /><span className="visually-hidden">LinkedIn</span></Nav.Link>
+          {/* <Nav.Link className="social-logo" id="nav-link-color" href="https://www.linkedin.com/in/tom-raley/" target="_blank" rel="noopener"><FaLinkedin size={32} /><span className="visually-hidden">LinkedIn</span></Nav.Link> */}
           <Nav.Link className="social-logo" id="nav-link-color" href="https://twitter.com/tom_raley" target="_blank" rel="noopener"><FaTwitterSquare size={32} /><span className="visually-hidden">Twitter</span></Nav.Link>
           <Nav.Link className="social-logo" id="nav-link-color" href="https://github.com/tom-raley" target="_blank" rel="noopener"><FaGithubSquare size={32} /><span className="visually-hidden">GitHub</span></Nav.Link>
         </Nav>
