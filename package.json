@@ -21,7 +21,7 @@
     "gatsby-remark-images-contentful": "^5.3.0",
     "gatsby-source-contentful": "^6.1.4",
     "gatsby-source-filesystem": "^4.0.0",
-    "gatsby-transformer-remark": "^5.0.0",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^4.3.0",
     "gatsby-transformer-sqip": "^4.3.0",
     "jquery": "^3.4.1",
